@@ -136,7 +136,7 @@ class ImplicitScheme:
         ), plot_rojection_res=True, print_res=True, ain=100)
 
 
-class KrankNikolson:
+class CrankNicholson:
     @staticmethod
     def solve(func, c1, c2, a, b, c, n, m):
         """
@@ -184,7 +184,7 @@ class KrankNikolson:
         for j in range(1, m):
             for i in range(1, n - 1):
                 vb[i] = u[i - 1][j - 1] + u[i + 1][j - 1] + s2 * u[i][j - 1]
-            u[:, j] = numpy.transpose(KrankNikolson.trisys(va, vd, vc, vb))
+            u[:, j] = numpy.transpose(CrankNicholson.trisys(va, vd, vc, vb))
 
         u = numpy.transpose(u)
         x = [i * h for i in range(n)]
@@ -233,7 +233,7 @@ def main():
     # ExplicitScheme.example_2(c, 6, 11)
     # ImplicitScheme.example_2(c, 6, 11)
 
-    KrankNikolson.example(c, 10, 11)
+    CrankNicholson.example(c, 10, 11)
 
 
 main()
