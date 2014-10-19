@@ -61,13 +61,13 @@ class ShowResult:
 
 class Solve:
     @staticmethod
-    def solve_exercise(func, plot_simple_res=True, plot_rojection_res=False, print_res=False, animate=True, ain=30):
+    def solve_exercise(func, plot_simple_res=True, plot_projection_res=False, print_res=False, animate=True, ain=30):
         x, t, u = func()
         if animate:
             ShowResult.animate_plot(x, u, len(t), ain)
         if print_res:
             ShowResult.print_results(x, t, u)
-        if plot_rojection_res:
+        if plot_projection_res:
             ShowResult.plot_projection_results(x, t, u)
         if plot_simple_res:
             ShowResult.plot_simple_results(x, t, u)
