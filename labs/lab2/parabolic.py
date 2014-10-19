@@ -55,7 +55,7 @@ class ExplicitScheme:
         Solve.solve_exercise(lambda: ExplicitScheme.solve(
             lambda x: 4*x - 4*x**2, 0, 0,
             1, 0.2, c, xc, tc
-        ), plot_rojection_res=True, print_res=True, ain=100)
+        ), plot_projection_res=True, print_res=True, ain=100)
 
     @staticmethod
     def example_2(c, xc, tc):
@@ -68,7 +68,7 @@ class ExplicitScheme:
         Solve.solve_exercise(lambda: ExplicitScheme.solve(
             lambda x: 4*x - 4*x**2, 0, 0,
             1, 0.33333, c, xc, tc
-        ), plot_rojection_res=True, print_res=True, ain=100)
+        ), plot_projection_res=True, print_res=True, ain=100)
 
 
 class ImplicitScheme:
@@ -120,7 +120,7 @@ class ImplicitScheme:
         Solve.solve_exercise(lambda: ExplicitScheme.solve(
             lambda x: 4*x - 4*x**2, 0, 0,
             1, 0.2, c, xc, tc
-        ), plot_rojection_res=True, print_res=True, ain=100)
+        ), plot_projection_res=True, print_res=True, ain=100)
 
     @staticmethod
     def example_2(c, xc, tc):
@@ -133,7 +133,7 @@ class ImplicitScheme:
         Solve.solve_exercise(lambda: ExplicitScheme.solve(
             lambda x: 4*x - 4*x**2, 0, 0,
             1, 0.33333, c, xc, tc
-        ), plot_rojection_res=True, print_res=True, ain=100)
+        ), plot_projection_res=True, print_res=True, ain=100)
 
 
 class CrankNicholson:
@@ -222,7 +222,7 @@ class CrankNicholson:
         Solve.solve_exercise(lambda: ExplicitScheme.solve(
             lambda x: math.sin(math.pi*x) + math.sin(3*math.pi*x), 0, 0,
             1, 0.1, c, xc, tc
-        ), plot_rojection_res=True, print_res=True, ain=100)
+        ), plot_projection_res=True, print_res=True, ain=100)
 
 
 def main():

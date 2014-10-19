@@ -50,7 +50,7 @@ class FiniteDifference:
             lambda z: math.sin(math.pi * z) + math.sin(2 * math.pi * z),
             lambda z: 0,
             1, 0.5, c, xc, tc
-        ), plot_rojection_res=True, ain=15)
+        ), plot_projection_res=True, ain=15)
 
     @staticmethod
     def ex2(c, xc, tc):
@@ -58,7 +58,7 @@ class FiniteDifference:
             lambda z: z if 0 <= z <= 3 / 5 else 1.5 - 1.5 * z,
             lambda z: 0,
             1, 0.5, c, xc, tc
-        ), plot_rojection_res=True, ain=150)
+        ), plot_projection_res=True, ain=150)
 
     @staticmethod
     def ex3(c, a, l, msc, xc, tc):
@@ -66,7 +66,7 @@ class FiniteDifference:
             lambda z: a * math.sin(math.pi / l * msc * z),
             lambda z: 0,
             1, 0.5, c, xc, tc
-        ), plot_rojection_res=True, ain=15)
+        ), plot_projection_res=True, ain=15)
 
         def analytic_solve(func, x_boundary, t_boundary, x_points_count, t_points_count):
             x_step = x_boundary / (x_points_count - 1)
@@ -82,7 +82,7 @@ class FiniteDifference:
         Solve.solve_exercise(lambda: analytic_solve(
             lambda z, temp: a * math.sin(math.pi / l * z * msc) * math.cos(math.pi / l * msc * c * temp),
             1, 0.5, xc, tc
-        ), plot_rojection_res=True, ain=15)
+        ), plot_projection_res=True, ain=15)
 
 
 def main():
