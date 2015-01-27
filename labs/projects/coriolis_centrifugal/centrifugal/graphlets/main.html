@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html><head>
+    <title>Centrifugal effect </title>
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="Centrifugal effect">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="jsxgraph.css">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.1/jsxgraphcore.js"></script></head>
+
+<body cz-shortcut-listen="true">
+
+<div style="background-color:#EFEFEF; width:100%;">   <!--  div to create background color for jsxgraph animation section  id=001 -->
+
+    <br>
+    <br>
+    <br>
+
+
+    <div style="display:table; margin-left:auto; margin-right:auto;">
+        <div style="display:table-row;">
+            <div style="display:table-cell; padding:3px; border: 1px solid #CCCCCC; background-color:#F9F9F9;">
+
+                <div style="display:table;">
+
+                    <div style="display:table-row;">
+                        <div style="display:table-cell; border: 1px solid #CCCCCC; background-color:#FFFFFF;">
+                            <div style="display:table" ;="">
+                                <div style="display:table-row;">
+                                    <div style="display:table-cell;">
+                                        <div id="jxgboxleft" class="jxgbox" style="width: 500px; height: 500px; overflow: hidden; position: relative;"><svg style="overflow: hidden; width: 500px; height: 500px;"><defs><filter id="jxgboxleft_f1" width="300%" height="300%" filterUnits="userSpaceOnUse"><feOffset result="offOut" in="SourceAlpha" dx="5" dy="5"></feOffset><feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"></feGaussianBlur><feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend></filter></defs><g><text id="jxgboxleft_licenseText" x="20px" y="14px" style="font-family:Arial,Helvetica,sans-serif; font-size:12px; fill:#356AA0;  opacity:0.3;">JSXGraph v0.99.1 Copyright (C) see http://jsxgraph.org</text><path id="jxgboxleft_jxgBoard1L4_ticks_1" stroke-linecap="butt" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" stroke-width="1" d="M 0 0" style="position: absolute; visibility: inherit;" display="inline"></path><ellipse id="jxgboxleft_jxgBoard1P9" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" cx="254" cy="254" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxleft_jxgBoard1C10" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="black" fill-opacity="1" cx="254" cy="254" rx="200" ry="200" style="position: absolute;"></ellipse><ellipse id="jxgboxleft_jxgBoard1P11" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse></g><g><ellipse id="jxgboxleft_jxgBoard1C12" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#eeeeee" fill-opacity="1" cx="250" cy="250" rx="200" ry="200" style="position: absolute;"></ellipse></g><g></g><g><path id="jxgboxleft_jxgBoard1G16" stroke-linecap="butt" stroke-linejoin="round" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#ccc" fill-opacity="0.3" d=" M 250 250 C 316.6 250 383.20000000000005 250 450 250 C 450 139.54305003384133 360.4569499661587 50 250 50 C 250 116.60000000000002 250 183.20000000000002 250 250" style="position: absolute;"></path><path id="jxgboxleft_jxgBoard1G20" stroke-linecap="butt" stroke-linejoin="round" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#ccc" fill-opacity="0.3" d=" M 250 250 C 183.39999999999998 250 116.79999999999998 250 50 250 C 50 360.4569499661587 139.54305003384133 450 250 450 C 250 383.4 250 316.79999999999995 250 250" style="position: absolute;"></path></g><g></g><g><path id="jxgboxleft_jxgBoard1G23" stroke-linecap="butt" stroke-linejoin="round" stroke="black" stroke-opacity="1" stroke-width="1px" fill-opacity="0" d="M 0 0" display="none" style="position: absolute; visibility: hidden;"></path></g><g></g><g><line id="jxgboxleft_jxgBoard1L4" x1="90" y1="480" x2="410" y2="480" stroke="#000000" stroke-opacity="1" stroke-width="1px" fill-opacity="0" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></line><line id="jxgboxleft_jxgBoard1L7" x1="90" y1="480" x2="378" y2="480" stroke="#000000" stroke-opacity="1" stroke-width="3px" fill-opacity="0" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></line></g><g></g><g><ellipse id="jxgboxleft_jxgBoard1P1" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="90" cy="480" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;" buffered-rendering="auto"></ellipse><ellipse id="jxgboxleft_jxgBoard1P2" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="410" cy="480" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;" buffered-rendering="auto"></ellipse><ellipse id="jxgboxleft_jxgBoard1P6" stroke="#000000" stroke-opacity="1" stroke-width="2px" fill="#ffffff" fill-opacity="1" cx="377.67676767676767" cy="480" rx="7" ry="7" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></ellipse><ellipse id="jxgboxleft_jxgBoard1P13" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxleft_jxgBoard1P14" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxleft_jxgBoard1P15" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxleft_jxgBoard1P17" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxleft_jxgBoard1P18" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxleft_jxgBoard1P19" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxleft_jxgBoard1P21" stroke="#ff0000" stroke-opacity="0" stroke-width="0px" fill="#000000" fill-opacity="1" style="position: absolute;" cx="430" cy="250" rx="5" ry="5"></ellipse></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg><div class="JXGinfobox" id="jxgboxleft_jxgBoard1_infobox" display="none" style="position: absolute; z-index: 9; font-size: 12px; color: rgb(187, 187, 187); opacity: 1; left: 250px; right: auto; bottom: auto; top: 243px; visibility: hidden;" stroke-width="2px">0,0</div><div id="jxgboxleft_navigationbar" style="color: rgb(51, 51, 51); padding: 2px; position: absolute; font-size: 14px; cursor: pointer; z-index: 100; right: 5px; bottom: 5px; background-color: transparent;"></div><div class="JXGtext" id="jxgboxleft_jxgBoard1T8" style="position: absolute; z-index: 9; font-size: 12px; color: rgb(0, 0, 0); opacity: 1; left: 426px; right: auto; bottom: auto; top: 473px; visibility: inherit;" stroke-width="2px" display="inline">90.00</div><div class="JXGtext" id="jxgboxleft_jxgBoard1P21Label" style="position: absolute; z-index: 9; font-size: 12px; color: black; opacity: 1; left: 440px; right: auto; bottom: auto; top: 240px;"></div></div>
+                                    </div>
+                                    <div style="display:table-cell;">
+                                        <div id="jxgboxright" class="jxgbox" style="width: 500px; height: 500px; overflow: hidden; position: relative;"><svg style="overflow: hidden; width: 500px; height: 500px;"><defs><filter id="jxgboxright_f1" width="300%" height="300%" filterUnits="userSpaceOnUse"><feOffset result="offOut" in="SourceAlpha" dx="5" dy="5"></feOffset><feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"></feGaussianBlur><feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend></filter><marker id="jxgboxright_jxgBoard37283L26TriangleStart" stroke="#B22" stroke-opacity="1" fill="#B22" fill-opacity="1" stroke-width="0" orient="auto" markerUnits="strokeWidth" viewBox="-2 -2 20 20" markerHeight="10" markerWidth="10" refY="5" refX="0" style="position: absolute;"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker id="jxgboxright_jxgBoard37283L29TriangleStart" stroke="#22B" stroke-opacity="1" fill="#22B" fill-opacity="1" stroke-width="0" orient="auto" markerUnits="strokeWidth" viewBox="-2 -2 20 20" markerHeight="10" markerWidth="10" refY="5" refX="0" style="position: absolute;"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs><g><path id="jxgboxright_jxgBoard37283L4_ticks_1" stroke-linecap="butt" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" stroke-width="1" d="M 0 0" style="position: absolute; visibility: inherit;" display="inline"></path><ellipse id="jxgboxright_jxgBoard37283P9" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" cx="254" cy="254" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283C10" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="black" fill-opacity="1" cx="254" cy="254" rx="200" ry="200" style="position: absolute;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P11" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P24" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P25" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P27" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P28" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse></g><g><ellipse id="jxgboxright_jxgBoard37283C12" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#eeeeee" fill-opacity="1" cx="250" cy="250" rx="200" ry="200" style="position: absolute;"></ellipse></g><g></g><g><path id="jxgboxright_jxgBoard37283G16" stroke-linecap="butt" stroke-linejoin="round" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#ccc" fill-opacity="0.3" d=" M 250 250 C 316.6 250 383.20000000000005 250 450 250 C 450 139.54305003384133 360.4569499661587 50 250 50 C 250 116.60000000000002 250 183.20000000000002 250 250" style="position: absolute;"></path><path id="jxgboxright_jxgBoard37283G20" stroke-linecap="butt" stroke-linejoin="round" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#ccc" fill-opacity="0.3" d=" M 250 250 C 183.39999999999998 250 116.79999999999998 250 50 250 C 50 360.4569499661587 139.54305003384133 450 250 450 C 250 383.4 250 316.79999999999995 250 250" style="position: absolute;"></path></g><g></g><g><path id="jxgboxright_jxgBoard37283G23" stroke-linecap="butt" stroke-linejoin="round" stroke="black" stroke-opacity="1" stroke-width="1px" fill-opacity="0" d="M 0 0" display="none" style="position: absolute; visibility: hidden;"></path></g><g></g><g><line id="jxgboxright_jxgBoard37283L4" x1="90" y1="480" x2="410" y2="480" stroke="#000000" stroke-opacity="1" stroke-width="1px" fill-opacity="0" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></line><line id="jxgboxright_jxgBoard37283L7" x1="90" y1="480" x2="303" y2="480" stroke="#000000" stroke-opacity="1" stroke-width="3px" fill-opacity="0" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></line><line id="jxgboxright_jxgBoard37283L26" x1="430" y1="250" x2="510" y2="250" marker-end="url(#jxgboxright_jxgBoard37283L26TriangleStart)" stroke="#B22" stroke-opacity="1" stroke-width="2px" fill-opacity="0" style="position: absolute;"></line><line id="jxgboxright_jxgBoard37283L29" x1="529" y1="388" x2="287.87538648124206" y2="426.4262332300809" marker-end="url(#jxgboxright_jxgBoard37283L29TriangleStart)" stroke="#22B" stroke-opacity="1" stroke-width="2px" fill-opacity="0" display="none" style="position: absolute; visibility: hidden;"></line></g><g></g><g><ellipse id="jxgboxright_jxgBoard37283P1" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="90" cy="480" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;" buffered-rendering="auto"></ellipse><ellipse id="jxgboxright_jxgBoard37283P2" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="410" cy="480" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;" buffered-rendering="auto"></ellipse><ellipse id="jxgboxright_jxgBoard37283P6" stroke="#000000" stroke-opacity="1" stroke-width="2px" fill="#ffffff" fill-opacity="1" cx="303.3333333333333" cy="480" rx="7" ry="7" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></ellipse><ellipse id="jxgboxright_jxgBoard37283P13" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P14" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="450" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P15" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="50" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P17" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P18" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="50" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P19" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="450" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P21" stroke="#ff0000" stroke-opacity="0" stroke-width="0px" fill="#000000" fill-opacity="1" style="position: absolute;" cx="430" cy="250" rx="5" ry="5"></ellipse></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg><div class="JXGinfobox" id="jxgboxright_jxgBoard37283_infobox" display="none" style="position: absolute; z-index: 9; font-size: 12px; color: rgb(187, 187, 187); opacity: 1; left: 250px; right: auto; bottom: auto; top: 243px; visibility: hidden;">0,0</div><div id="jxgboxright_navigationbar" style="color: rgb(51, 51, 51); padding: 2px; position: absolute; font-size: 14px; cursor: pointer; z-index: 100; right: 5px; bottom: 5px; background-color: transparent;"></div><div class="JXGtext" id="jxgboxright_jxgBoard37283T8" style="position: absolute; z-index: 9; font-size: 12px; color: rgb(0, 0, 0); opacity: 1; left: 426px; right: auto; bottom: auto; top: 473px; visibility: inherit;" display="inline">0.00</div><div class="JXGtext" id="jxgboxright_jxgBoard37283P21Label" style="position: absolute; z-index: 9; font-size: 12px; color: black; opacity: 1; left: 440px; right: auto; bottom: auto; top: 240px;"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display:table-row;">
+                        <div style="display:table-cell; border:0px solid #CCCCCC;">
+                            <div style="display:table; width:100%;">
+                                <div style="display:table-row;">
+                                    <div style="display:table-cell; text-align:center; padding-top:1em; padding-bottom:0.5em;">
+                                        <button id="playpausebutton" style="width:6em; font-size:1.2em" onclick="play()">play</button>
+                                        <button style="width:6em; font-size:1.2em" onclick="resetView()">reset</button>&nbsp;&nbsp;
+                                        <button style="width:6em; font-size:1.2em" onclick="resetAll()">reset all</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display:table-row;">
+                        <div style="display:table-cell; padding-left:1em;">
+                            <div style="display:table; width:100%">
+                                <div style="display:table-row;">
+                                    <div style="display:table-cell; width:38%; padding-top:0.5em; padding-bottom:0.5em;">
+                                        <input type="checkbox" id="traces" checked="checked"> Show traces
+                                    </div>
+                                    <div style="display:table-cell; width:38%">
+                                        <input type="checkbox" id="autohalt"> Apply auto halt
+                                    </div>
+                                    <div style="display:table-cell;">
+                                        <input type="checkbox" id="quadrants" checked="checked"> Show quadrants
+                                    </div>
+                                </div> <!-- end display:table-row -->
+                                <div style="display:table-row;">
+                                    <div style="display:table-cell; padding-top:0.5em; padding-bottom:0.5em;">
+                                        <input type="checkbox" id="centrfcor"> Show <span style="color:#C22;">centrifugal</span> and <span style="color:#22B;">coriolis</span>
+                                    </div>
+                                    <div style="display:table-cell">
+                                        <input type="checkbox" id="onhaltreset"> On auto halt reset
+                                    </div>
+                                    <div style="display:table-cell;">
+                                        <input type="checkbox" id="disks" checked="checked"> Show disks
+                                    </div>
+                                </div> <!-- end display:table-row -->
+                            </div>  <!-- end display:table -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div> <!-- closing the outer div display:table  margin-left:auto  margin-right:auto -->
+
+
+    <br>
+    <br>
+    <br>
+
+    <!-- This patch is necessary only for JSXGraph 0.99.1 -->
+    <script type="text/javascript" src="IE_SVG_patch.js"></script>
+
+    <script type="text/javascript" src="centrifugal_effect.js"></script>
+
+
+
+</div> <!--  end of div to create background color for jsxgraph animation section  id=001 -->
+
+
+<div class="tb column">        <!-- start of display:table to establish body with two columns -->
+    <div class="tr">        <!-- start of display:row to establish body with two columns -->
+        <div class="td navigation" id="navigation"> <!-- the first column of the two-cell display:table -->
+
+            <div style="text-align:center">
+                <button style="display: inline; margin-bottom: 10px; width: 100%; border: 0px; padding-top: 5px; padding-bottom: 5px;" type="button" id="hide_nav">Hide navigation column</button>
+
+            </div>
+
+
+
+            <br>
+            <br>
+            <br>
+
+            <div class="contentlist">
+                <ul class="navigation">
+                    <li><a href="/index.htm">Home</a></li>
+                    <li><a href="../phys256/physics.php">About the articles</a></li>
+                    <li><a href="../phys256/history.php">History</a></li>
+                    <li><a href="../phys256/contact.php">Contact</a></li>
+                </ul>
+            </div>
+
+            <!--<b>Newtonian physics: rotation</b> -->
+            <div class="contenthead"><b>Interactive animations</b></div>
+            <div class="contentlist">
+                <ul class="navigation">
+                    <li><a href="../graphlets/coriolis_effect.php">Coriolis effect</a></li>
+                    <li><a href="../graphlets/centrifugal_effect.php">Centrifugal effect</a></li>
+                </ul>
+            </div>
+            <div class="contenthead"><b>Basic&nbsp;story, without&nbsp;math</b></div>
+            <div class="contentlist">
+                <ul class="navigation">
+                    <li><a href="../phys256/coriolis_in_meteorology.php">Coriolis effect in Meteorology</a></li>
+                </ul>
+            </div>
+            <div class="contenthead"><b>Coriolis effect related</b></div>
+            <div class="contentlist">
+                <ul class="navigation">
+                    <li><a href="../phys256/coupling.php">Rotational-vibrational coupling</a></li>
+                    <li><a href="../phys256/inertial_oscillations.php">Oceanography: <br>
+                        Inertial oscillations</a></li>
+                    <li><a href="../phys256/comparison.php">Comparison of ballistics and inertial oscillations</a></li>
+                    <li><a href="../phys256/cyclonic_flow.php">Meteorology: <br>Cyclonic flow</a></li>
+                    <li><a href="../phys256/foucault_pendulum.php">The Foucault pendulum </a></li>
+                    <ul class="navigation"> <!--start of list to group the three Foucault pendulum articles  -->
+                        <li><a href="../phys256/foucault_pendulum_intro.php">Prelude</a></li>
+                        <li><a href="../phys256/foucault_pendulum.php">Main article</a></li>
+                        <li><a href="../phys256/foucault_pendulum_2.php">Elaboration</a></li>
+                    </ul>  <!-- end of list to group the three Foucault pendulum articles -->
+                    <li><a href="../phys256/eotvos.php">The Eötvös effect</a><br></li>
+                    <li><a href="../phys256/flowmeter.php">Coriolis flow meter</a><br></li>
+                </ul>
+            </div>  <!-- End of div class="contentlist" -->
+            <div class="contenthead"><b>Rotation</b></div>
+            <div class="contentlist">
+                <ul class="navigation">
+                    <li><a href="../phys256/angular_momentum.php">Angular momentum of orbiting objects</a></li>
+                    <!-- <a href="../phys256/angular_momentum_2.php">Angular momentum of orbiting objects II</a> -->
+                    <li><a href="../phys256/gyroscope_physics.php">Gyroscope Physics</a></li>
+                    <li><a href="../phys256/equatorial_bulge.php">The Earth's equatorial bulge</a></li>
+                    <li><a href="../phys256/centrifugal_force.php">Centrifugal force</a></li>
+                </ul>
+            </div> <!-- end of div class="contentlist" -->
+            <div class="contenthead"><b>Fundamentals</b></div>
+            <div class="contentlist">
+                <ul class="navigation">
+                    <li><a href="../phys256/apparent_motion.php">Apparent motion</a></li>
+                    <li><a href="../phys256/inertial_coordinate_system.php">Inertial coordinate system</a></li>
+                    <li><a href="../phys256/inertial_space.php">Inertial space</a></li>
+                </ul>
+            </div>         <!-- end of div class="contentlist" to group articles about fundamentals -->
+            <div class="contenthead"><b>Classical dynamics</b></div>
+            <div class="contentlist">
+                <ul class="navigation">
+                    <li><a href="../phys256/quantity_of_motion.php">Quantity of motion</a></li>
+                    <li><a href="../phys256/least_action.php">Least action</a></li>
+                </ul>
+            </div> <!-- end of div class="contentlist" to group newtonian dynamics articles -->
+            <div class="contenthead"><b>General physics: rotation</b></div>
+            <div class="contentlist">
+                <ul class="navigation">
+                    <li><a href="../phys256/sagnac.php">The Sagnac effect</a></li>
+                </ul>
+            </div> <!-- end of div class="contentlist" for general physics: rotation -->
+            <div class="contenthead"><b>Relativistic physics:</b></div>
+            <div class="contentlist">
+                <ul class="navigation">
+                    <li><a href="../phys256/special.php">Special relativity</a></li>
+                    <li><a href="../phys256/general.php">General relativity</a></li>
+                </ul>
+            </div>  <!-- end of div class="contentlist" for relativistic physics -->
+            <div class="contenthead"><b>Java simulations <br> Created with <a href="http://www.um.es/fem/EjsWiki/index.php/Main/WhatIsEJS?userlang=en">EJS</a></b></div>
+            <div class="contentlist"> <!-- start of div class="contentlist" for java simulations -->
+                <ul class="navigation">
+                    <li><a href="../ejs/inertial_oscillation_simulation.php">Inertial oscillation</a></li>
+                    <ul class="navigation"><li><a href="../ejs/inertial_oscillation_sim_ext.php">math</a></li></ul>
+                    <li><a href="../ejs/great_circles_simulation.php">Great circles.</a></li>
+                    <li><a href="../ejs/ballistics_and_orbits_simulation.php">Ballistics and orbits</a></li>
+                    <li><a href="../ejs/ballistics_simulation.php">Ballistics</a></li>
+                    <li><a href="../ejs/circumnavigating_pendulum_simulation.php">Circumnavigating pendulum</a></li>
+                    <li><a href="../ejs/foucault_pendulum_simulation.php">Foucault pendulum</a></li>
+                    <ul class="navigation"><li><a href="../ejs/foucault_pendulum_sim_ext.php">math</a></li></ul>
+                    <li><a href="../ejs/foucault_rod_simulation.php">Foucault rod</a></li>
+                    <ul class="navigation"><li><a href="../ejs/foucault_rod_sim_ext.php">math</a></li></ul>
+                    <li><a href="../ejs/angular_acceleration_simulation.php">Angular acceleration</a></li>
+                    <li><a href="../ejs/spacestation_vertical_throw_simulation.php">Spacestation <br>vertical throw</a></li>
+                    <li><a href="../ejs/force_laws_simulation.php">Force laws</a></li>
+                </ul>
+            </div> <!-- end of div class="contentlist" for java simulations -->
+
+
+
+            <br>
+        </div>  <!-- end of the first column of the two-cell table -->
+
+        <div class="td article" id="article">  <!-- start of the second column of a two-cell table -->
+
+            <button style="display:none;" type="button" id="show_nav">Show navigation column</button>
+
+            <script type="text/javascript">
+                (function () {
+                    var navigationColumn = document.getElementById('navigation');
+                    var showNavButton = document.getElementById('show_nav');
+                    var hideNavButton = document.getElementById('hide_nav');
+                    hideNavButton.style.display = 'inline';
+
+                    var showNavHandler = function() {
+                        navigationColumn.style.display = 'table-cell';
+                        showNavButton.style.display = 'none';
+                    };
+
+                    var hideNavHandler = function() {
+                        navigationColumn.style.display = 'none';
+                        showNavButton.style.display = 'inline';
+                    };
+
+                    showNavButton.onclick = showNavHandler;
+                    hideNavButton.onclick = hideNavHandler;
+                }());
+
+            </script>
+
+            <h1>Centrifugal effect</h1>
+
+            <p>This animation forms part of a pair of rotation effect animations that complement each other. The other rotation effect animation is called <a href="coriolis_effect.php">coriolis effect</a>. </p>
+
+            <p>This animation represents the case of an object sliding frictionless over the surface of a flat disk that is rotating. I will call the object 'the puck', as in ice hockey. </p>
+
+            <p>The disk supports the weight of the puck, but as there is no friction the rotation of the disk does not affect the motion of the puck. In other words: there's no dynamics going on; there is no exchange of momentum, no change of kinetic energy. </p>
+
+            <h2>View</h2>
+
+            <p>The two circles with quadrants represent a disk. The left view shows the disk from a stationary point of view. The view on the right is the same disk, as seen from a co-rotating point of view. It's the view you would get if a video camera is suspended above the disk, co-rotating with it. </p>
+
+
+            <h2>Controlling the animation</h2>
+
+            <p>The two elements underneath the two disks are sliders for interaction with the animation. When the animation is running the two sliders are temporarily not displayed. </p>
+
+            <p>The button 'reset' halts the animation and returns the position of the object to the starting point, but the settings are kept. 'Reset all' preserves nothing; it resets to the same state as when the webpage loaded. </p>
+
+            <p>About the checkbox 'apply auto halt': the puck moves in a straight line, so once it has left the frame of the animation it's gone. There's no point in continuing to run the animation after that, hence the auto halt feature. </p>
+
+            <h2>Evolution of the display </h2>
+
+            <p>When a run starts the puck is initially co-rotating with the disk, as an object that is held rigidly in place. After a full revolution the puck is released and from then on it moves in a straight line. </p>
+
+            <p>The slider on the right can be moved from -2 to 1. With the default setting of '0' the puck has initially no velocity relative to the disk. That is, when the setting is '0' the released puck moves over the disk with the velocity of its co-rotating motion. For velocity settings between -1 and 0 the puck moves <i>forward</i>, even though it is released <i>backwards</i> relative to the disk. That is, for the (-1,0) range the launch reduces the velocity of the puck, but doesn't reverse it. </p>
+
+            <p>Both when launched forward and when launched backward the puck proceeds <i>away</i> from the rotation axis of the disk. On release the direction of motion is tangential to circling the center, and there is no centripetal force, so the motion of the puck will always be away from the center. </p>
+
+            <p>I refer to this rotation effect as 'centrifugal effect': the puck is always going to move away from the center. By contrast: the distinguishing feature of the <a href="coriolis_effect.php">Coriolis effect</a> is that the acceleration with respect to the rotating system is the same for any direction of velocity relative to the rotating system. In the above centrifugal effect simulation you see that when the puck is launched backward it moves in a direction <i>away</i> from the rotation axis, whereas in the case of the Coriolis effect an object that moves backward (with respect to the rotating system) will move <i>closer to the central axis of rotation</i> </p>
+
+            <p>Of course, as the puck moves away from the center of the rotating disk the difference in velocity between the puck and the part of the disk where it is located becomes larger and larger. The velocity of the puck remains the same, but the parts of the disk far away from the center have a larger velocity, so the puck's velocity <i>relative to the disk</i> keeps increasing. The Coriolis vector is proportional to the velocity relative to the rotating system and pretty soon the Coriolis vector is larger than the centrifugal vector. But it's still not the Coriolis effect, for the puck still keeps moving <i>away</i> from the disk's rotation axis.</p>
+
+
+            <h3>Motion in a straight line</h3>
+
+            <p>Summerizing: the centrifugal effect is a consequence of the fact that the puck is moving in a straight line.</p>
+
+
+
+            <br>
+            <br>
+            <p>This interactive animation was created with the Javascript Library <a href="http://jsxgraph.org">JSXGraph</a>. JSXGraph is developed at the <a href="http://www.dmi.uni-bayreuth.de/de/index.html">Lehrstuhl für Mathematik und ihre Didaktik</a>, University of Bayreuth, Germany. </p>
+            <br>
+            <br>
+            <!--Creative Commons License-->
+            <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="../cc_img/by-sa_88x31.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
+
+            <p>
+                <i>Last time this page was modified:</i> June 15 2013</p>
+
+        </div>  <!-- end of the second column of a two-cell display:table -->
+    </div>  <!-- end of display:table-row to establish body with two columns -->
+</div>  <!-- end of display:table to establish body with two columns -->
+
+
+
+
+</body></html>

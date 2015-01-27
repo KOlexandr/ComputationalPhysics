@@ -1,0 +1,206 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0px; }
+
+/* separate CSS for the printer-friendly version */
+body.print {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    margin: 0px; }
+
+div.tb {display: table; border-spacing:0px}
+div.tr {display: table-row;}
+div.td {display: table-cell;}
+
+div.column {
+    margin: auto; }
+
+div.navigation {
+    vertical-align: top;
+    max-width: 14em;
+    padding: 10px;
+    background-color: #f9f9f9;
+    font-size: 90%; }
+
+/* the link to switch between 256x256 pixels and 512x512 pixels */
+div.switch {
+    padding: 10px 10px 10px 10px;
+    background-color: #eee; }
+
+/* each category in the navigation column has its head */
+div.contenthead {
+    padding: 10px;
+    background-color: #eee; }
+
+/* the list for each category in the navigation column */
+div.contentlist {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 25px;
+    padding-right: 10px; }
+
+ul.navigation {
+    color: #bbb;
+    padding-left: 1em;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+
+li {
+    list-style-type: disc;
+    margin-top: 3px;
+    margin-bottom: 3px; }
+
+/* the right-hand cell of a two-cell display:table is the article space */
+div.article {
+    max-width: 50em;
+    background-color: #eee;
+    vertical-align: top;
+    padding-top: 10px;
+    padding-left: 2%;
+    padding-bottom: 30px;
+    padding-right: 2%;
+    color: #404040;     /*the attribute 'color' is the font color*/
+}
+
+div.article_print {
+    max-width: 45em;
+    margin: auto;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-left: 2%;
+    padding-bottom: 30px;
+    padding-right: 2%;
+    color: #000000; }
+
+
+h2 { margin-top: 50px; }
+h3 { margin-top: 30px; margin-bottom: 20px;}
+h4 { margin-top: 20px; margin-bottom: 10px;}
+h5 { margin-top: 10px; margin-bottom: 5px;}
+
+
+div.image {
+    margin: 0px 10px 5px 20px;
+    border: 1px solid #cccccc;
+    background-color: #f9f9f9;
+    padding: 3px;
+    float: right;
+    clear: right; }
+
+div.image256 {
+    width: 258px;
+    margin: 0px 10px 5px 20px;
+    border: 1px solid #cccccc;
+    background-color: #f9f9f9;
+    padding: 3px;
+    float: right;
+    clear: right; }
+
+div.image512 {
+    width: 514px;
+    margin: 0px 10px 5px 20px;
+    border: 1px solid #cccccc;
+    background-color: #f9f9f9;
+    padding: 3px;
+    float: right;
+    clear: right; }
+
+div.image512centered {
+    width: 514px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #cccccc;
+    background-color: #f9f9f9;
+    padding: 3px; }
+
+
+div.jxgbox_border {
+    border-spacing: 0px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 2px; }
+
+div.jxgbox_rightfloat {
+    display: table;
+    border-spacing: 0px;
+    border: 1px solid #CCCCCC;
+    background-color: #F9F9F9;
+    padding: 3px;
+    margin: 0px 10px 5px 20px;
+    float: right;
+    clear: right; }
+
+div.jxgbox_centered {
+    border-spacing: 0px;
+    border: 1px solid #CCCCCC;
+    background-color: #F9F9F9;
+    padding: 3px;
+    margin: 0px 10px 5px 20px;
+    margin-left: auto;
+    margin-right: auto; }
+
+div.sizebutton {
+    text-align: center;
+    margin-top: ex; }
+
+button {
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #ddd, #ddd);
+    background-color: #ddd; }
+
+
+div.ejs_screenshot {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3ex;
+    margin-bottom: 3ex; }
+
+
+img.border {
+    border: 1px solid #cccccc; }
+
+img.padding {
+    background-color: #ffffff;
+    padding-left: 128px;
+    padding-right: 128px;
+    border: 1px solid #cccccc; }
+
+img.padding128 {
+    background-color: #ffffff;
+    padding-left: 128px;
+    padding-right: 128px;
+    border: 1px solid #cccccc; }
+
+div.caption {
+    margin: 5px 3px 5px 3px;
+    font-size: 90%; }
+
+div.caption_ejs {
+    text-align: center;
+    margin: 5px 1em 5px 1em;
+    font-size: 90%;
+    font-style: italic; }
+
+
+div.eq_tb { width: 100%;}
+div.eq_tr { }
+div.eq_fm { width: 80%; padding-left: 40px;}
+div.eq_nr { padding-bottom: 15px; vertical-align: middle; font-size: 80%; }
+
+div.equation {
+    margin-left: 40px; }
+
+
+a:link {color: #555599;}
+a:visited {color: #885588;}
+a:hover {background: #dddddd;}
+
+
+/* additional font shrinking for the <sub></sub> element */
+sub { font-size: 70%; }
+
+/* additional font shrinking for the <sup></sup> element */
+sup { font-size: 70%; }
+
