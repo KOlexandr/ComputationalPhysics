@@ -24,16 +24,16 @@ class ExplicitScheme:
         """
         h = a / (n - 1)
         k = b / (m - 1)
-        r = c**2 * k / (h**2)
+        r = c ** 2 * k / (h ** 2)
         s = 1 - 2 * r
         u = pylab.zeros((n, m))
 
-        #boundary conditions
+        # boundary conditions
         u[0, :] = c1
-        u[n-1, :] = c2
+        u[n - 1, :] = c2
 
-        #first line of values
-        u[1:n-1, 0] = [func(i*h) for i in range(1, n-1)]
+        # first line of values
+        u[1:n - 1, 0] = [func(i * h) for i in range(1, n - 1)]
 
         for j in range(1, m):
             for i in range(1, n - 1):
@@ -53,7 +53,7 @@ class ExplicitScheme:
         :param tc: count of point on time axis
         """
         Solve.solve_exercise(lambda: ExplicitScheme.solve(
-            lambda x: 4*x - 4*x**2, 0, 0,
+            lambda x: 4 * x - 4 * x ** 2, 0, 0,
             1, 0.2, c, xc, tc
         ), plot_projection_res=True, print_res=True, ain=100)
 
@@ -66,7 +66,7 @@ class ExplicitScheme:
         :param tc: count of point on time axis
         """
         Solve.solve_exercise(lambda: ExplicitScheme.solve(
-            lambda x: 4*x - 4*x**2, 0, 0,
+            lambda x: 4 * x - 4 * x ** 2, 0, 0,
             1, 0.33333, c, xc, tc
         ), plot_projection_res=True, print_res=True, ain=100)
 
@@ -89,16 +89,16 @@ class ImplicitScheme:
         """
         h = a / (n - 1)
         k = b / (m - 1)
-        r = c**2 * k / (h**2)
+        r = c ** 2 * k / (h ** 2)
         s = 1 - 2 * r
         u = pylab.zeros((n, m))
 
-        #boundary conditions
+        # boundary conditions
         u[0, :] = c1
-        u[n-1, :] = c2
+        u[n - 1, :] = c2
 
-        #first line of values
-        u[1:n-1, 0] = [func(i*h) for i in range(1, n-1)]
+        # first line of values
+        u[1:n - 1, 0] = [func(i * h) for i in range(1, n - 1)]
 
         for j in range(1, m):
             for i in range(1, n - 1):
@@ -118,7 +118,7 @@ class ImplicitScheme:
         :param tc: count of point on time axis
         """
         Solve.solve_exercise(lambda: ExplicitScheme.solve(
-            lambda x: 4*x - 4*x**2, 0, 0,
+            lambda x: 4 * x - 4 * x ** 2, 0, 0,
             1, 0.2, c, xc, tc
         ), plot_projection_res=True, print_res=True, ain=100)
 
@@ -131,7 +131,7 @@ class ImplicitScheme:
         :param tc: count of point on time axis
         """
         Solve.solve_exercise(lambda: ExplicitScheme.solve(
-            lambda x: 4*x - 4*x**2, 0, 0,
+            lambda x: 4 * x - 4 * x ** 2, 0, 0,
             1, 0.33333, c, xc, tc
         ), plot_projection_res=True, print_res=True, ain=100)
 
@@ -154,32 +154,32 @@ class CrankNicholson:
         """
         h = a / (n - 1)
         k = b / (m - 1)
-        r = c**2 * k / (h**2)
-        s1 = 2 + 2/r
-        s2 = 2/r - 2
+        r = c ** 2 * k / (h ** 2)
+        s1 = 2 + 2 / r
+        s2 = 2 / r - 2
         u = pylab.zeros((n, m))
 
-        #boundary conditions
+        # boundary conditions
         u[0, :] = c1
-        u[n-1, :] = c2
+        u[n - 1, :] = c2
 
-        #first line of values
-        u[1:n-1, 0] = [func(i*h) for i in range(1, n-1)]
+        # first line of values
+        u[1:n - 1, 0] = [func(i * h) for i in range(1, n - 1)]
 
         # Formation of the diagonal and do not lie on the diagonal
         # elements of A, the vector constant in
         # and the solution of a tridiagonal system AX = B
         vd = [s1 for _ in range(n)]
-        vd[0] = vd[n-1] = 1
+        vd[0] = vd[n - 1] = 1
 
-        va = [-1 for _ in range(n-1)]
-        va[n-2] = 0
+        va = [-1 for _ in range(n - 1)]
+        va[n - 2] = 0
 
-        vc = [-1 for _ in range(n-1)]
+        vc = [-1 for _ in range(n - 1)]
         vc[0] = 0
 
         vb = [0 for _ in range(n)]
-        vb[0], vb[n-1] = c1, c2
+        vb[0], vb[n - 1] = c1, c2
 
         for j in range(1, m):
             for i in range(1, n - 1):
@@ -207,7 +207,7 @@ class CrankNicholson:
             b[i] = b[i] - mult * b[i - 1]
         x = list(range(n))
         x[-1] = b[-1] / d[-1]
-        for i in range(n-2, -1, -1):
+        for i in range(n - 2, -1, -1):
             x[i] = (b[i] - c[i] * x[i + 1]) / d[i]
         return x
 
@@ -220,7 +220,7 @@ class CrankNicholson:
         :param tc: count of point on time axis
         """
         Solve.solve_exercise(lambda: ExplicitScheme.solve(
-            lambda x: math.sin(math.pi*x) + math.sin(3*math.pi*x), 0, 0,
+            lambda x: math.sin(math.pi * x) + math.sin(3 * math.pi * x), 0, 0,
             1, 0.1, c, xc, tc
         ), plot_projection_res=True, print_res=True, ain=100)
 

@@ -58,6 +58,14 @@ class ShowResult:
         animation.FuncAnimation(fig, animate, np.arange(1, time), init_func=init, interval=interval, blit=True)
         plt.grid()
 
+    @staticmethod
+    def plot_2d(x, y):
+        plt.plot(x, y)
+        plt.grid(True)
+        # plt.title(title)
+        plt.show()
+        # axes.set_title('title')
+
 
 class Solve:
     @staticmethod
