@@ -121,6 +121,7 @@ var initialize = function(){
         for (var t = 0; t < iterationNumbers; t += hodgkinHuxley.dt) {
             if (t > timeInjectionStart && t < timeInjectionStop) {
                 rawInjection = IDC + IRand * 2 * (Math.random() - 0.5);
+                //IDC += IRand; rawInjection = IDC;
             } else {
                 rawInjection = 0;
             }
