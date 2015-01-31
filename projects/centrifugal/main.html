@@ -2,120 +2,183 @@
 <html>
 <head>
     <title>Centrifugal effect</title>
+    <meta name="author" content="Oleksandr KOL Kucher">
+    <link href="external/bootstrap.min.css" rel="stylesheet" media="screen">
     <script type="text/javascript" src="external/jquery.min.js"></script>
     <script type="text/javascript" src="external/jsxgraphcore.js"></script>
     <script type="text/javascript" src="centrifugal.js"></script>
 </head>
 <body>
-<div style="background-color:#EFEFEF; width:100%;">
-    <div style="display:table; margin-left:auto; margin-right:auto;">
-        <div style="display:table-row;">
-            <div style="display:table-cell; padding:3px; border: 1px solid #CCCCCC; background-color:#F9F9F9;">
-                <div style="display:table;">
-                    <div style="display:table-row;" class="bothFigures">
-                        <div style="display:table-cell; border: 1px solid #CCCCCC; background-color:#FFFFFF;">
-                            <div style="display:table">
-                                <div style="display:table-row;">
-                                    <div style="display:table-cell;" class="leftFigure">
-                                        <div id="jxgboxleft" class="jxgbox" style="width: 500px; height: 500px; overflow: hidden; position: relative;">
-                                            <svg style="overflow: hidden; width: 500px; height: 500px;">
-                                                <defs>
-                                                    <filter id="jxgboxleft_f1" width="300%" height="300%" filterUnits="userSpaceOnUse">
-                                                        <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5"></feOffset>
-                                                        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"></feGaussianBlur>
-                                                        <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
-                                                    </filter>
-                                                </defs>
-                                                <g>
-                                                    <path id="jxgboxleft_jxgBoard1L4_ticks_1" stroke-linecap="butt" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" stroke-width="1" d="M 0 0" style="position: absolute; visibility: inherit;" display="inline"></path>
-                                                    <ellipse id="jxgboxleft_jxgBoard1P9" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" cx="254" cy="254" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
-                                                    <ellipse id="jxgboxleft_jxgBoard1C10" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="black" fill-opacity="1" cx="254" cy="254" rx="200" ry="200" style="position: absolute;"></ellipse>
-                                                    <ellipse id="jxgboxleft_jxgBoard1P11" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
-                                                </g>
-                                                <g>
-                                                    <ellipse id="jxgboxleft_jxgBoard1C12" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#eeeeee" fill-opacity="1" cx="250" cy="250" rx="200" ry="200" style="position: absolute;"></ellipse>
-                                                </g>
-                                                <g></g>
-                                                <g>
-                                                    <path id="jxgboxleft_jxgBoard1G16" stroke-linecap="butt" stroke-linejoin="round" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#ccc" fill-opacity="0.3" d=" M 250 250 C 316.6 250 383.20000000000005 250 450 250 C 450 139.54305003384133 360.4569499661587 50 250 50 C 250 116.60000000000002 250 183.20000000000002 250 250" style="position: absolute;"></path>
-                                                    <path id="jxgboxleft_jxgBoard1G20" stroke-linecap="butt" stroke-linejoin="round" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#ccc" fill-opacity="0.3" d=" M 250 250 C 183.39999999999998 250 116.79999999999998 250 50 250 C 50 360.4569499661587 139.54305003384133 450 250 450 C 250 383.4 250 316.79999999999995 250 250" style="position: absolute;"></path>
-                                                </g>
-                                                <g></g>
-                                                <g>
-                                                    <path id="jxgboxleft_jxgBoard1G23" stroke-linecap="butt" stroke-linejoin="round" stroke="black" stroke-opacity="1" stroke-width="1px" fill-opacity="0" d="M 0 0" display="none" style="position: absolute; visibility: hidden;"></path>
-                                                </g>
-                                                <g></g>
-                                                <g>
-                                                    <line id="jxgboxleft_jxgBoard1L4" x1="90" y1="480" x2="410" y2="480" stroke="#000000" stroke-opacity="1" stroke-width="1px" fill-opacity="0" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></line>
-                                                    <line id="jxgboxleft_jxgBoard1L7" x1="90" y1="480" x2="378" y2="480" stroke="#000000" stroke-opacity="1" stroke-width="3px" fill-opacity="0" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></line>
-                                                </g>
-                                                <g></g>
-                                                <g>
-                                                    <ellipse id="jxgboxleft_jxgBoard1P1" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="90" cy="480" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;" buffered-rendering="auto"></ellipse>
-                                                    <ellipse id="jxgboxleft_jxgBoard1P2" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="410" cy="480" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;" buffered-rendering="auto"></ellipse>
-                                                    <ellipse id="jxgboxleft_jxgBoard1P6" stroke="#000000" stroke-opacity="1" stroke-width="2px" fill="#ffffff" fill-opacity="1" cx="377.67676767676767" cy="480" rx="7" ry="7" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></ellipse>
-                                                    <ellipse id="jxgboxleft_jxgBoard1P13" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
-                                                    <ellipse id="jxgboxleft_jxgBoard1P14" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse>
-                                                    <ellipse id="jxgboxleft_jxgBoard1P15" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse>
-                                                    <ellipse id="jxgboxleft_jxgBoard1P17" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
-                                                    <ellipse id="jxgboxleft_jxgBoard1P18" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse>
-                                                    <ellipse id="jxgboxleft_jxgBoard1P19" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse>
-                                                    <ellipse id="jxgboxleft_jxgBoard1P21" stroke="#ff0000" stroke-opacity="0" stroke-width="0px" fill="#000000" fill-opacity="1" style="position: absolute;" cx="430" cy="250" rx="5" ry="5"></ellipse>
-                                                </g>
-                                                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
-                                            </svg>
-                                            <div class="JXGinfobox" id="jxgboxleft_jxgBoard1_infobox" display="none" style="position: absolute; z-index: 9; font-size: 12px; color: rgb(187, 187, 187); opacity: 1; left: 250px; right: auto; bottom: auto; top: 243px; visibility: hidden;" stroke-width="2px">0,0
-                                            </div>
-                                            <div id="jxgboxleft_navigationbar" style="color: rgb(51, 51, 51); padding: 2px; position: absolute; font-size: 14px; cursor: pointer; z-index: 100; right: 5px; bottom: 5px; background-color: transparent;"></div>
-                                            <div class="JXGtext" id="jxgboxleft_jxgBoard1T8" style="position: absolute; z-index: 9; font-size: 12px; color: rgb(0, 0, 0); opacity: 1; left: 426px; right: auto; bottom: auto; top: 473px; visibility: inherit;" stroke-width="2px" display="inline">90.00
-                                            </div>
-                                            <div class="JXGtext" id="jxgboxleft_jxgBoard1P21Label" style="position: absolute; z-index: 9; font-size: 12px; color: black; opacity: 1; left: 440px; right: auto; bottom: auto; top: 240px;"></div>
-                                        </div>
-                                    </div>
-                                    <div style="display:table-cell;" class="rightFigure">
-                                        <div id="jxgboxright" class="jxgbox" style="width: 500px; height: 500px; overflow: hidden; position: relative;"><svg style="overflow: hidden; width: 500px; height: 500px;"><defs><filter id="jxgboxright_f1" width="300%" height="300%" filterUnits="userSpaceOnUse"><feOffset result="offOut" in="SourceAlpha" dx="5" dy="5"></feOffset><feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"></feGaussianBlur><feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend></filter><marker id="jxgboxright_jxgBoard37283L26TriangleStart" stroke="#B22" stroke-opacity="1" fill="#B22" fill-opacity="1" stroke-width="0" orient="auto" markerUnits="strokeWidth" viewBox="-2 -2 20 20" markerHeight="10" markerWidth="10" refY="5" refX="0" style="position: absolute;"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker id="jxgboxright_jxgBoard37283L29TriangleStart" stroke="#22B" stroke-opacity="1" fill="#22B" fill-opacity="1" stroke-width="0" orient="auto" markerUnits="strokeWidth" viewBox="-2 -2 20 20" markerHeight="10" markerWidth="10" refY="5" refX="0" style="position: absolute;"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs><g><path id="jxgboxright_jxgBoard37283L4_ticks_1" stroke-linecap="butt" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" stroke-width="1" d="M 0 0" style="position: absolute; visibility: inherit;" display="inline"></path><ellipse id="jxgboxright_jxgBoard37283P9" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" cx="254" cy="254" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283C10" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="black" fill-opacity="1" cx="254" cy="254" rx="200" ry="200" style="position: absolute;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P11" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P24" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P25" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P27" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P28" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse></g><g><ellipse id="jxgboxright_jxgBoard37283C12" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#eeeeee" fill-opacity="1" cx="250" cy="250" rx="200" ry="200" style="position: absolute;"></ellipse></g><g></g><g><path id="jxgboxright_jxgBoard37283G16" stroke-linecap="butt" stroke-linejoin="round" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#ccc" fill-opacity="0.3" d=" M 250 250 C 316.6 250 383.20000000000005 250 450 250 C 450 139.54305003384133 360.4569499661587 50 250 50 C 250 116.60000000000002 250 183.20000000000002 250 250" style="position: absolute;"></path><path id="jxgboxright_jxgBoard37283G20" stroke-linecap="butt" stroke-linejoin="round" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#ccc" fill-opacity="0.3" d=" M 250 250 C 183.39999999999998 250 116.79999999999998 250 50 250 C 50 360.4569499661587 139.54305003384133 450 250 450 C 250 383.4 250 316.79999999999995 250 250" style="position: absolute;"></path></g><g></g><g><path id="jxgboxright_jxgBoard37283G23" stroke-linecap="butt" stroke-linejoin="round" stroke="black" stroke-opacity="1" stroke-width="1px" fill-opacity="0" d="M 0 0" display="none" style="position: absolute; visibility: hidden;"></path></g><g></g><g><line id="jxgboxright_jxgBoard37283L4" x1="90" y1="480" x2="410" y2="480" stroke="#000000" stroke-opacity="1" stroke-width="1px" fill-opacity="0" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></line><line id="jxgboxright_jxgBoard37283L7" x1="90" y1="480" x2="303" y2="480" stroke="#000000" stroke-opacity="1" stroke-width="3px" fill-opacity="0" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></line><line id="jxgboxright_jxgBoard37283L26" x1="430" y1="250" x2="510" y2="250" marker-end="url(#jxgboxright_jxgBoard37283L26TriangleStart)" stroke="#B22" stroke-opacity="1" stroke-width="2px" fill-opacity="0" style="position: absolute;"></line><line id="jxgboxright_jxgBoard37283L29" x1="529" y1="388" x2="287.87538648124206" y2="426.4262332300809" marker-end="url(#jxgboxright_jxgBoard37283L29TriangleStart)" stroke="#22B" stroke-opacity="1" stroke-width="2px" fill-opacity="0" display="none" style="position: absolute; visibility: hidden;"></line></g><g></g><g><ellipse id="jxgboxright_jxgBoard37283P1" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="90" cy="480" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;" buffered-rendering="auto"></ellipse><ellipse id="jxgboxright_jxgBoard37283P2" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="410" cy="480" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;" buffered-rendering="auto"></ellipse><ellipse id="jxgboxright_jxgBoard37283P6" stroke="#000000" stroke-opacity="1" stroke-width="2px" fill="#ffffff" fill-opacity="1" cx="303.3333333333333" cy="480" rx="7" ry="7" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></ellipse><ellipse id="jxgboxright_jxgBoard37283P13" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P14" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="450" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P15" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="50" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P17" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P18" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="50" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P19" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="450" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse><ellipse id="jxgboxright_jxgBoard37283P21" stroke="#ff0000" stroke-opacity="0" stroke-width="0px" fill="#000000" fill-opacity="1" style="position: absolute;" cx="430" cy="250" rx="5" ry="5"></ellipse></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg><div class="JXGinfobox" id="jxgboxright_jxgBoard37283_infobox" display="none" style="position: absolute; z-index: 9; font-size: 12px; color: rgb(187, 187, 187); opacity: 1; left: 250px; right: auto; bottom: auto; top: 243px; visibility: hidden;">0,0</div><div id="jxgboxright_navigationbar" style="color: rgb(51, 51, 51); padding: 2px; position: absolute; font-size: 14px; cursor: pointer; z-index: 100; right: 5px; bottom: 5px; background-color: transparent;"></div><div class="JXGtext" id="jxgboxright_jxgBoard37283T8" style="position: absolute; z-index: 9; font-size: 12px; color: rgb(0, 0, 0); opacity: 1; left: 426px; right: auto; bottom: auto; top: 473px; visibility: inherit;" display="inline">0.00</div><div class="JXGtext" id="jxgboxright_jxgBoard37283P21Label" style="position: absolute; z-index: 9; font-size: 12px; color: black; opacity: 1; left: 440px; right: auto; bottom: auto; top: 240px;"></div></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="display:table-row;" class="controlButtons">
-                        <div style="display:table-cell; border:0 solid #CCCCCC;">
-                            <div style="display:table; width:100%;">
-                                <div style="display:table-row;">
-                                    <div style="display:table-cell; text-align:center; padding-top:1em; padding-bottom:0.5em;">
-                                        <button id="playPauseButton" style="width:6em; font-size:1.2em">Start</button>
-                                        <button id="resetView" style="width:6em; font-size:1.2em">Reset</button>&nbsp;&nbsp;
-                                        <button id="resetAll" style="width:6em; font-size:1.2em">Reset All</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="display:table-row;" class="controlCheckboxes">
-                        <div style="display:table-cell; padding-left:1em;">
-                            <div style="display:table; width:100%">
-                                <div style="display:table-row;">
-                                    <div style="display:table-cell; width:33%; padding-top:0.5em; padding-bottom:0.5em;">
-                                        <input type="checkbox" id="traces">
-                                        <label for="traces">Show traces</label>
-                                    </div>
-                                    <div style="display:table-cell;  width:33%; padding-top:0.5em; padding-bottom:0.5em;">
-                                        <input type="checkbox" id="centrifugalCoriolis">
-                                        <label for="centrifugalCoriolis">Show <span style="color:#C22;">centrifugal</span> and <span style="color:#22B;">coriolis</span></label>
-                                    </div>
-                                    <div style="display:table-cell; width:33%">
-                                        <input type="checkbox" id="autoHalt">
-                                        <label for="autoHalt">Apply auto halt</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="alert alert-success"><h1 class="text-center"><strong>Rotating Reference Frames</strong></h1></div>
+    <div class="container" style="margin: auto; max-width: 1030px;">
+        <div class="leftFigure" style="float: left;">
+            <div id="jxgboxleft" class="jxgbox" style="width: 500px; height: 500px">
+                <svg style="overflow: hidden; width: 500px; height: 500px;">
+                    <defs>
+                        <filter id="jxgboxleft_f1" width="300%" height="300%" filterUnits="userSpaceOnUse">
+                            <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5"></feOffset>
+                            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"></feGaussianBlur>
+                            <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+                        </filter>
+                    </defs>
+                    <g>
+                        <path id="jxgboxleft_jxgBoard1L4_ticks_1" stroke-linecap="butt" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" stroke-width="1" d="M 0 0" style="position: absolute; visibility: inherit;" display="inline"></path>
+                        <ellipse id="jxgboxleft_jxgBoard1P9" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" cx="254" cy="254" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxleft_jxgBoard1C10" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="black" fill-opacity="1" cx="254" cy="254" rx="200" ry="200" style="position: absolute;"></ellipse>
+                        <ellipse id="jxgboxleft_jxgBoard1P11" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                    </g>
+                    <g>
+                        <ellipse id="jxgboxleft_jxgBoard1C12" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#eeeeee" fill-opacity="1" cx="250" cy="250" rx="200" ry="200" style="position: absolute;"></ellipse>
+                    </g>
+                    <g></g>
+                    <g>
+                        <path id="jxgboxleft_jxgBoard1G16" stroke-linecap="butt" stroke-linejoin="round" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#ccc" fill-opacity="0.3" d=" M 250 250 C 316.6 250 383.20000000000005 250 450 250 C 450 139.54305003384133 360.4569499661587 50 250 50 C 250 116.60000000000002 250 183.20000000000002 250 250" style="position: absolute;"></path>
+                        <path id="jxgboxleft_jxgBoard1G20" stroke-linecap="butt" stroke-linejoin="round" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#ccc" fill-opacity="0.3" d=" M 250 250 C 183.39999999999998 250 116.79999999999998 250 50 250 C 50 360.4569499661587 139.54305003384133 450 250 450 C 250 383.4 250 316.79999999999995 250 250" style="position: absolute;"></path>
+                    </g>
+                    <g></g>
+                    <g>
+                        <path id="jxgboxleft_jxgBoard1G23" stroke-linecap="butt" stroke-linejoin="round" stroke="black" stroke-opacity="1" stroke-width="1px" fill-opacity="0" d="M 0 0" display="none" style="position: absolute; visibility: hidden;"></path>
+                    </g>
+                    <g></g>
+                    <g>
+                        <line id="jxgboxleft_jxgBoard1L4" x1="90" y1="480" x2="410" y2="480" stroke="#000000" stroke-opacity="1" stroke-width="1px" fill-opacity="0" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></line>
+                        <line id="jxgboxleft_jxgBoard1L7" x1="90" y1="480" x2="378" y2="480" stroke="#000000" stroke-opacity="1" stroke-width="3px" fill-opacity="0" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></line>
+                    </g>
+                    <g></g>
+                    <g>
+                        <ellipse id="jxgboxleft_jxgBoard1P1" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="90" cy="480" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;" buffered-rendering="auto"></ellipse>
+                        <ellipse id="jxgboxleft_jxgBoard1P2" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="410" cy="480" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;" buffered-rendering="auto"></ellipse>
+                        <ellipse id="jxgboxleft_jxgBoard1P6" stroke="#000000" stroke-opacity="1" stroke-width="2px" fill="#ffffff" fill-opacity="1" cx="377.67676767676767" cy="480" rx="7" ry="7" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></ellipse>
+                        <ellipse id="jxgboxleft_jxgBoard1P13" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxleft_jxgBoard1P14" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxleft_jxgBoard1P15" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxleft_jxgBoard1P17" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxleft_jxgBoard1P18" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxleft_jxgBoard1P19" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxleft_jxgBoard1P21" stroke="#ff0000" stroke-opacity="0" stroke-width="0px" fill="#000000" fill-opacity="1" style="position: absolute;" cx="430" cy="250" rx="5" ry="5"></ellipse>
+                    </g>
+                    <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                </svg>
+                <div class="JXGinfobox" id="jxgboxleft_jxgBoard1_infobox" display="none" style="position: absolute; z-index: 9; font-size: 12px; color: rgb(187, 187, 187); opacity: 1; left: 250px; right: auto; bottom: auto; top: 243px; visibility: hidden;" stroke-width="2px">0,0</div>
+                <div id="jxgboxleft_navigationbar" style="color: rgb(51, 51, 51); padding: 2px; position: absolute; font-size: 14px; cursor: pointer; z-index: 100; right: 5px; bottom: 5px; background-color: transparent;"></div>
+                <div class="JXGtext" id="jxgboxleft_jxgBoard1T8" style="position: absolute; z-index: 9; font-size: 12px; color: rgb(0, 0, 0); opacity: 1; left: 426px; right: auto; bottom: auto; top: 473px; visibility: inherit;" stroke-width="2px" display="inline">90.00</div>
+                <div class="JXGtext" id="jxgboxleft_jxgBoard1P21Label" style="position: absolute; z-index: 9; font-size: 12px; color: black; opacity: 1; left: 440px; right: auto; bottom: auto; top: 240px;"></div>
+            </div>
+        </div>
+        <div class="rightFigure" style="float: left;">
+            <div id="jxgboxright" class="jxgbox" style="width: 500px; height: 500px;">
+                <svg style="overflow: hidden; width: 500px; height: 500px;">
+                    <defs>
+                        <filter id="jxgboxright_f1" width="300%" height="300%" filterUnits="userSpaceOnUse">
+                            <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5"></feOffset>
+                            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"></feGaussianBlur>
+                            <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+                        </filter>
+                        <marker id="jxgboxright_jxgBoard37283L26TriangleStart" stroke="#B22" stroke-opacity="1" fill="#B22" fill-opacity="1" stroke-width="0" orient="auto" markerUnits="strokeWidth" viewBox="-2 -2 20 20" markerHeight="10" markerWidth="10" refY="5" refX="0" style="position: absolute;">
+                            <path d="M 0 0 L 10 5 L 0 10 z"></path>
+                        </marker>
+                        <marker id="jxgboxright_jxgBoard37283L29TriangleStart" stroke="#22B" stroke-opacity="1" fill="#22B" fill-opacity="1" stroke-width="0" orient="auto" markerUnits="strokeWidth" viewBox="-2 -2 20 20" markerHeight="10" markerWidth="10" refY="5" refX="0" style="position: absolute;">
+                            <path d="M 0 0 L 10 5 L 0 10 z"></path>
+                        </marker>
+                    </defs>
+                    <g>
+                        <path id="jxgboxright_jxgBoard37283L4_ticks_1" stroke-linecap="butt" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" stroke-width="1" d="M 0 0" style="position: absolute; visibility: inherit;" display="inline"></path>
+                        <ellipse id="jxgboxright_jxgBoard37283P9" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" cx="254" cy="254" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283C10" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="black" fill-opacity="1" cx="254" cy="254" rx="200" ry="200" style="position: absolute;"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283P11" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283P24" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283P25" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283P27" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283P28" stroke="#0000ff" stroke-opacity="1" stroke-width="2px" fill="red" fill-opacity="1" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                    </g>
+                    <g>
+                        <ellipse id="jxgboxright_jxgBoard37283C12" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#eeeeee" fill-opacity="1" cx="250" cy="250" rx="200" ry="200" style="position: absolute;"></ellipse>
+                    </g>
+                    <g></g>
+                    <g>
+                        <path id="jxgboxright_jxgBoard37283G16" stroke-linecap="butt" stroke-linejoin="round" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#ccc" fill-opacity="0.3" d=" M 250 250 C 316.6 250 383.20000000000005 250 450 250 C 450 139.54305003384133 360.4569499661587 50 250 50 C 250 116.60000000000002 250 183.20000000000002 250 250" style="position: absolute;"></path>
+                        <path id="jxgboxright_jxgBoard37283G20" stroke-linecap="butt" stroke-linejoin="round" stroke="#0000ff" stroke-opacity="0" stroke-width="0px" fill="#ccc" fill-opacity="0.3" d=" M 250 250 C 183.39999999999998 250 116.79999999999998 250 50 250 C 50 360.4569499661587 139.54305003384133 450 250 450 C 250 383.4 250 316.79999999999995 250 250" style="position: absolute;"></path>
+                    </g>
+                    <g></g>
+                    <g>
+                        <path id="jxgboxright_jxgBoard37283G23" stroke-linecap="butt" stroke-linejoin="round" stroke="black" stroke-opacity="1" stroke-width="1px" fill-opacity="0" d="M 0 0" display="none" style="position: absolute; visibility: hidden;"></path>
+                    </g>
+                    <g></g>
+                    <g>
+                        <line id="jxgboxright_jxgBoard37283L4" x1="90" y1="480" x2="410" y2="480" stroke="#000000" stroke-opacity="1" stroke-width="1px" fill-opacity="0" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></line>
+                        <line id="jxgboxright_jxgBoard37283L7" x1="90" y1="480" x2="303" y2="480" stroke="#000000" stroke-opacity="1" stroke-width="3px" fill-opacity="0" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></line>
+                        <line id="jxgboxright_jxgBoard37283L26" x1="430" y1="250" x2="510" y2="250" marker-end="url(#jxgboxright_jxgBoard37283L26TriangleStart)" stroke="#B22" stroke-opacity="1" stroke-width="2px" fill-opacity="0" style="position: absolute;"></line>
+                        <line id="jxgboxright_jxgBoard37283L29" x1="529" y1="388" x2="287.87538648124206" y2="426.4262332300809" marker-end="url(#jxgboxright_jxgBoard37283L29TriangleStart)" stroke="#22B" stroke-opacity="1" stroke-width="2px" fill-opacity="0" display="none" style="position: absolute; visibility: hidden;"></line>
+                    </g>
+                    <g></g>
+                    <g>
+                        <ellipse id="jxgboxright_jxgBoard37283P1" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="90" cy="480" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;" buffered-rendering="auto"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283P2" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="410" cy="480" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;" buffered-rendering="auto"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283P6" stroke="#000000" stroke-opacity="1" stroke-width="2px" fill="#ffffff" fill-opacity="1" cx="303.3333333333333" cy="480" rx="7" ry="7" style="position: absolute; visibility: inherit;" display="inline" buffered-rendering="auto"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283P13" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283P14" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="450" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283P15" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="50" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283P17" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283P18" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="50" cy="250" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283P19" stroke="#ff0000" stroke-opacity="1" stroke-width="2px" fill="#ff0000" fill-opacity="1" cx="250" cy="450" rx="4" ry="4" display="none" style="position: absolute; visibility: hidden;"></ellipse>
+                        <ellipse id="jxgboxright_jxgBoard37283P21" stroke="#ff0000" stroke-opacity="0" stroke-width="0px" fill="#000000" fill-opacity="1" style="position: absolute;" cx="430" cy="250" rx="5" ry="5"></ellipse>
+                    </g>
+                    <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                </svg>
+                <div class="JXGinfobox" id="jxgboxright_jxgBoard37283_infobox" display="none" style="position: absolute; z-index: 9; font-size: 12px; color: rgb(187, 187, 187); opacity: 1; left: 250px; right: auto; bottom: auto; top: 243px; visibility: hidden;">0,0</div>
+                <div id="jxgboxright_navigationbar" style="color: rgb(51, 51, 51); padding: 2px; position: absolute; font-size: 14px; cursor: pointer; z-index: 100; right: 5px; bottom: 5px; background-color: transparent;"></div>
+                <div class="JXGtext" id="jxgboxright_jxgBoard37283T8" style="position: absolute; z-index: 9; font-size: 12px; color: rgb(0, 0, 0); opacity: 1; left: 426px; right: auto; bottom: auto; top: 473px; visibility: inherit;" display="inline">0.00</div>
+                <div class="JXGtext" id="jxgboxright_jxgBoard37283P21Label" style="position: absolute; z-index: 9; font-size: 12px; color: black; opacity: 1; left: 440px; right: auto; bottom: auto; top: 240px;"></div>
+            </div>
+        </div>
+        <div class="controlCheckboxes" style="width: 100%;">
+            <div style="align-content: center; width: 50%; float: left;">
+                <div class="col-sm-5" style="float: right;">
+                    <label style="float: right;">
+                        Show traces&nbsp;
+                        <input type="checkbox" id="traces" style="float: right;">
+                    </label>
+                </div>
+                <div class="col-sm-9" style="float: right;">
+                    <label style="float: right;">
+                        Show <span style="color:#C22;">centrifugal</span> and <span style="color:#22B;">coriolis</span>&nbsp;
+                        <input type="checkbox" id="centrifugalCoriolis" style="float: right;">
+                    </label>
+                </div>
+            </div>
+            <div style="align-content: center; width: 50%; float: left;">
+                <div class="col-sm-6">
+                    <label style="float: left;">
+                        <input type="checkbox" id="autoHalt">
+                        Apply auto halt
+                    </label>
+                </div>
+                <div class="col-sm-10">
+                    <label style="float: left;">
+                        <input type="number" id="speed" min="30" max="500" value="100">
+                        Speed Of Platform Rotating
+                    </label>
                 </div>
             </div>
         </div>
+        <div class="controlButtons" style="width: 100%;">
+            <div style="display: inline-block; float: left; width: 50%; margin-top: 10px;">
+                <button class="btn btn-success" id="playPauseButton" type="button" style="width: 100px; float: right; margin-right: 5px;">Start</button>
+            </div>
+            <div style="display: inline-block; float: left; width: 50%; margin-top: 10px;">
+                <button class="btn btn-info" id="resetView" style="width: 100px; float: left; margin-left: 5px;">Reset</button>
+            </div>
+            <div style="display: inline-block; float: right; width: 50%; margin-top: 10px;">
+                <button class="btn btn-info" id="resetAll" style="width: 100px; float: left; margin-left: 5px;">Reset All</button>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="panel-footer" style="margin-top: 20px; text-align: center;">
+        <div class="container">
+            <p>Powered by <a href="http://getbootstrap.com">Twitter Bootstrap</a></p>
+            <p>Author <a href="mailto:olexandr.kucher@gmail.com">Oleksandr KOL Kucher</a></p>
+            <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        </div>
+    </div>
 </body>
 </html>

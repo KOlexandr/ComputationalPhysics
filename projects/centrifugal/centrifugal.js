@@ -18,6 +18,9 @@ $(document).ready(function() {
      $("#resetAll").click(function() {
         coriolisAlg.resetAll();
      });
+    $("#speed").change(function() {
+        coriolisAlg.setSteps($(this).val());
+    })
 });
 
 function Centrifugal(dist, speed, steps) {
@@ -38,8 +41,6 @@ function Centrifugal(dist, speed, steps) {
 
     var boundary = 125;  // boundary of the viewport in user coordinates
     var diskRadius = 100;  // The radius of the disk
-    var increment = (2 * Math.PI) / steps;
-    var loopEnd = 2 * Math.PI - increment / 2;
 
     this.interval = null;
     this.isPaused = true;
@@ -73,6 +74,7 @@ function Centrifugal(dist, speed, steps) {
     this.centrifugal = null;
 
     this.init = function() {
+        this.setSteps(steps);
         refreshCheckboxes();
 
         this.boardLeft = createBoard("jxgboxleft", boundary);
@@ -127,9 +129,15 @@ function Centrifugal(dist, speed, steps) {
         this.bindJXGEvents();
     };
 
+    this.setSteps = function(steps) {
+        this.steps = steps;
+        this.increment = (2 * Math.PI) / this.steps;
+        this.loopEnd = 2 * Math.PI - this.increment / 2;
+    };
+
     this.playing = function() {
-        that.angle = that.angle + increment;
-        if (that.released === 0 && that.angle > loopEnd) {
+        that.angle = that.angle + that.increment;
+        if (that.released === 0 && that.angle > that.loopEnd) {
             that.angle = 0;
             that.released = 1;
             that.setPowerStates();
