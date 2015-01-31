@@ -421,4 +421,4 @@ var resetAll = function () {
     refreshCheckboxes();
     refreshVisibilities();
     boardSliders.update();
-};  
+};
