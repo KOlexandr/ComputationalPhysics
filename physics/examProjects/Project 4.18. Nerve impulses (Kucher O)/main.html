@@ -1,0 +1,185 @@
+<html>
+<head>
+    <title>Hodgkin-Huxley Model</title>
+    <meta name="author" content="Oleksandr KOL Kucher">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="js/external/jquery.min.js"></script>
+    <script type="text/javascript" src="js/external/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/external/jquery.flot.js"></script>
+    <script type="text/javascript" src="js/hodgkinHuxley.js"></script>
+</head>
+<body style="padding: 5px;" onload="initialize();">
+<div class="alert alert-success"><h1 class="text-center"><strong>Hodgkin-Huxley Model</strong></h1></div>
+<div class="container">
+    <div id="dbgOutput"></div>
+    <div id="hodgkinHuxley" style="margin: auto; width: 640px; height: 480px; padding: 0;" class="demo-placeholder">
+        <canvas class="flot-base" width="640" height="480" style="direction: ltr; position: absolute; left: 0; top: 0; width: 640px; height: 480px;"></canvas>
+        <div class="flot-text" style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; font-size: smaller; color: rgb(84, 84, 84);">
+            <div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; display: block;">
+                <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 71px; top: 461px; left: 22px; text-align: center;">0</div>
+                <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 71px; top: 461px; left: 95px; text-align: center;">25</div>
+                <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 71px; top: 461px; left: 171px; text-align: center;">50</div>
+                <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 71px; top: 461px; left: 246px; text-align: center;">75</div>
+                <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 71px; top: 461px; left: 319px; text-align: center;">100</div>
+                <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 71px; top: 461px; left: 395px; text-align: center;">125</div>
+                <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 71px; top: 461px; left: 470px; text-align: center;">150</div>
+                <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 71px; top: 461px; left: 546px; text-align: center;">175</div>
+                <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 71px; top: 461px; left: 622px; text-align: center;">200</div>
+            </div>
+            <div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; display: block;">
+                <div class="flot-tick-label tickLabel" style="position: absolute; top: 336px; left: 14px; text-align: right;">0</div>
+                <div class="flot-tick-label tickLabel" style="position: absolute; top: 224px; left: 8px; text-align: right;">50</div>
+                <div class="flot-tick-label tickLabel" style="position: absolute; top: 112px; left: 2px; text-align: right;">100</div>
+                <div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 2px; text-align: right;">150</div>
+                <div class="flot-tick-label tickLabel" style="position: absolute; top: 448px; left: 4px; text-align: right;">-50</div>
+            </div>
+        </div>
+        <canvas class="flot-overlay" width="640" height="480" style="direction: ltr; position: absolute; left: 0; top: 0; width: 640px; height: 480px;"></canvas>
+        <div class="legend">
+            <div style="position: absolute; width: 150px; height: 38px; top: 14px; right: 14px; opacity: 0.85; background-color: rgb(255, 255, 255);"></div>
+            <table style="position:absolute;top:14px;right:14px;;font-size:smaller;color:#545454">
+                <tbody>
+                    <tr>
+                        <td class="legendColorBox">
+                            <div style="border:1px solid #ccc;padding:1px">
+                                <div style="width:4px;height:0;border:5px solid rgb(0,0,0);overflow:hidden"></div>
+                            </div>
+                        <td class="legendLabel">membrane voltage (mV)
+                    </tr>
+                    <tr>
+                        <td class="legendColorBox">
+                            <div style="border:1px solid #ccc;padding:1px">
+                                <div style="width:4px;height:0;border:5px solid rgb(255,0,0);overflow:hidden"></div>
+                            </div>
+                        <td class="legendLabel">injected current (nA/cm^2)
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div>
+        <form>
+            <div class="init-values">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="c" data-toggle="tooltip" data-placement="top" title="Membrane capacitance">C (muF/cm^2)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="c" min="0.001" max="100" value="1">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="gk" data-toggle="tooltip" data-placement="top" title="Conductance of K">GK (mmho/cm^2)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="gk" min="0" max="500" value="36">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="gna" data-toggle="tooltip" data-placement="top" title="Conductance of Na">GNa (mmho/cm^2)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="gna" min="0" max="500" value="120">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="gi" data-toggle="tooltip" data-placement="top" title="Conductance of I out">GI (mmho/cm^2)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="gi" min="0" max="10" value="0.3">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="vk" data-toggle="tooltip" data-placement="top" title="Equilibrium Potentials of K">VK (mV)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="vk" min="-200" max="200" value="-12">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="vna" data-toggle="tooltip" data-placement="top" title="Equilibrium Potentials of Na">VNa (mV)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="vna" min="-200" max="200" value="115">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="vi" data-toggle="tooltip" data-placement="top" title="Equilibrium Potentials of I out">VI (mV)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="vi" min="-200" max="200" value="10.613">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="v0" data-toggle="tooltip" data-placement="top" title="Initial Membrane Potentials of K">V(0) (mV)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="v0" min="-200" max="200" value="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="iterationNumbers" data-toggle="tooltip" data-placement="top">Time (ms)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="iterationNumbers" min="0" max="2000" value="200">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="timeInjectionStart" data-toggle="tooltip" data-placement="top" title="Injection Start Time">Injection Start (ms)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="timeInjectionStart" min="0" max="2000" value="25">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="timeInjectionStop" data-toggle="tooltip" data-placement="top" title="Injection Stop Time">Injection Stop (ms)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="timeInjectionStop" min="0" max="2000" value="175">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="idc" data-toggle="tooltip" data-placement="top">IDC (nA/cm^2)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="idc" min="0" max="200" value="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="iRand" data-toggle="tooltip" data-placement="top">IRand (nA/cm^2)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="iRand" min="0" max="200" value="35">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="electricityPowerStep" data-toggle="tooltip" data-placement="top" title="Electricity Power Step">Itau (ms)</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" id="electricityPowerStep" min="0" max="10" value="1">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" style="margin: auto;">
+                <div class="col-sm-6">
+                    <button class="btn btn-success" id="start" type="button" style="width: 100px; margin-top: 10px; float: right;">Start</button>
+                </div>
+                <div class="col-sm-6">
+                    <button class="btn btn-info" type="reset" style="width: 100px; margin-top: 10px; float: left;">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <h2><span id="errorDiv" class="label label-danger"></span></h2>
+</div>
+<div class="container">
+    <div style="padding-top: 10px; text-align: justify; text-indent: 20px;">
+        A simple browser/Javascript based simulation of
+        <a href="http://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model">Hodgkin's &amp; Huxley's formulas</a>
+        for action potential generation in the squid giant axon. I suppose the source code is mostly self-explaining.
+        I use the parameters from Christof Koch's book Biophysics of Computation, chapter 6,
+        the formulas for forward and backward rates, and the differential equations for the
+        three gating variables. For both these equations and the transmembrane current equation,
+        I use explicit (forward) Euler for discretization and a time step of 0.025ms.
+        The current consists of a DC (IDC) and a random component (uniform distribution (-1; 1),
+        scaled by IRand), lowpass-filtered (1st order RC) with Itau.
+    </div>
+</div>
+<div class="panel-footer" style="margin-top: 20px; text-align: center;">
+    <div class="container">
+        <p>Powered by <a href="http://getbootstrap.com">Twitter Bootstrap</a></p>
+        <p>Author <a href="mailto:olexandr.kucher@gmail.com">Oleksandr KOL Kucher</a></p>
+        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    </div>
+</div>
+</body>
+</html>
